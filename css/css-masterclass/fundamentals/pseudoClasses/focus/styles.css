@@ -1,0 +1,5 @@
+button:focus {
+    border: 2px solid royalblue;
+    background: royalblue;
+    color: white
+}

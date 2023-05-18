@@ -1,0 +1,10 @@
+p::before {
+    content: "→";
+    color: deeppink;
+}
+
+p::after {
+    content: "←";
+    color: deeppink
+}
+

@@ -1,0 +1,26 @@
+.box {
+    width: 50px;
+    height: 50px;
+}
+
+.first.box {
+    background-color: hsl(340deg 100% 50% / 1);
+}
+.second.box {
+    background-color: hsl(340deg 100% 50% / 0.75);
+}
+.third.box {
+    background-color: hsl(340deg 100% 50% / 0.5);
+}
+.fourth.box {
+    background-color: hsl(340deg 100% 50% / 0.25);
+}
+
+.fifth.box {
+    background-color: hsl(181deg 64% 45%);
+    box-shadow: 1px 2px 4px hsl(181deg 50% 30%)
+}
+
+em {
+    background-color: hsl(50deg 100% 50%);
+}

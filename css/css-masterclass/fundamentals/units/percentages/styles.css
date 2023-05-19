@@ -1,0 +1,11 @@
+.box {
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+}
+
+.child {
+    width:50%;
+    height:75%;
+    background-color:black;
+}

@@ -1,0 +1,23 @@
+h2 {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 2px dotted;
+}
+
+.red-box {
+    width: 50px;
+    height: 25px;
+    background: red;
+}
+
+strong {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: peachpuff;
+}
+
+p {
+    max-width: 125px;
+}

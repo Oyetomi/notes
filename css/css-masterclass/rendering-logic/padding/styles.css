@@ -1,0 +1,7 @@
+.box {
+    background-color: tomato;
+    padding-block-start: 20px;
+    padding-block-end: 40px;
+    padding-inline-start: 60px;
+    padding-inline-end: 80px;
+}

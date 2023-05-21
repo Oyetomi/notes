@@ -1,0 +1,11 @@
+strong {
+    display: inline-block;
+    color: white;
+    background: red;
+    width: 100px;
+    text-align: center;
+}
+
+strong:hover {
+    transform: scale(1.2);
+}

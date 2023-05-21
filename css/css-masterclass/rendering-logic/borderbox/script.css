@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+section {
+    width: 150px;
+}
+
+p {
+    width: 100%;
+    padding: 16px;
+    border:  2px solid;
+}

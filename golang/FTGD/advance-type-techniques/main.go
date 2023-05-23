@@ -2,6 +2,18 @@ package main
 
 import "fmt"
 
+type PPosition struct {
+	x, y int
+}
+
+func (p *PPosition) Move(val int) {
+	fmt.Println("The position is moved by:", val)
+}
+
+type Player struct {
+	PPosition
+}
+
 const (
 	ColorBlue Color = iota + 1
 	ColorBlack
@@ -41,6 +53,8 @@ type SpecialEntity struct {
 }
 
 func main() {
+	p := Player{}
+	p.Move(1000)
 	e := Entity{
 		name:    "my entity",
 		id:      "id 1",

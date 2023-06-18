@@ -48,10 +48,18 @@ const List = () => {
 };
 
 const Search = () => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    event.preventDefault();
+  };
   return (
     <>
       <label htmlFor="search">Search:</label>
-      <input id="search" type="text" placeholder="Search.." />
+      <input
+        id="search"
+        type="text"
+        placeholder="Search.."
+        onChange={handleChange}
+      />
     </>
   );
 };

@@ -1,10 +1,5 @@
 import "./App.css";
 
-const welcome = {
-  greeting: "Hey",
-  title: "React",
-};
-
 const list = [
   {
     title: "React",
@@ -24,7 +19,7 @@ const list = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>My Hacker Stories</h1>
@@ -33,9 +28,9 @@ function App() {
       <List />
     </div>
   );
-}
+};
 
-function List() {
+const List = () => {
   return (
     <ul>
       {list.map((item) => (
@@ -50,15 +45,15 @@ function List() {
       ))}
     </ul>
   );
-}
+};
 
-function Search() {
+const Search = () => {
   return (
     <>
       <label htmlFor="search">Search:</label>
       <input id="search" type="text" placeholder="Search.." />
     </>
   );
-}
+};
 
 export default App;

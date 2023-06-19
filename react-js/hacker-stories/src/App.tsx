@@ -29,7 +29,7 @@ const App = () => {
       objectID: 1,
     },
   ];
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("React");
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div>
       <h1>My Hacker Stories</h1>
-      <Search onSearch={handleSearch} />
+      <Search search={searchTerm} onSearch={handleSearch} />
       <hr />
       <List list={searchedStories} />
     </div>
@@ -68,16 +68,18 @@ const List: React.FC<ListProps> = ({ list }) => {
 };
 
 type SearchProps = {
+  search: string;
   onSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Search: React.FC<SearchProps> = ({ onSearch }) => {
+const Search: React.FC<SearchProps> = ({ onSearch, search }) => {
   return (
     <>
       <label htmlFor="search">Search:</label>
       <input
         id="search"
         type="text"
+        value={search}
         placeholder="Search.."
         onChange={onSearch}
       />

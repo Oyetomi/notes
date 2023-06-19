@@ -46,26 +46,32 @@ const App = () => {
   );
 };
 
+type ItemProps = {
+  item: storiesProp;
+};
+
+const Item: React.FC<ItemProps> = ({ item }) => (
+  <li>
+    <span>
+      <a href={item.url}>{item.title}</a>
+    </span>
+    <span>{item.author}</span>
+    <span>{item.num_comments}</span>
+    <span>{item.points}</span>
+  </li>
+);
+
 type ListProps = {
   list: storiesProp[];
 };
 
-const List: React.FC<ListProps> = ({ list }) => {
-  return (
-    <ul>
-      {list.map((item) => (
-        <li key={item.objectID}>
-          <span>
-            <a href={item.url}>{item.title}</a>
-          </span>
-          <span>{item.author}</span>
-          <span>{item.num_comments}</span>
-          <span>{item.points}</span>
-        </li>
-      ))}
-    </ul>
-  );
-};
+const List: React.FC<ListProps> = ({ list }) => (
+  <ul>
+    {list.map((item) => (
+      <Item key={item.objectID} item={item} />
+    ))}
+  </ul>
+);
 
 type SearchProps = {
   search: string;

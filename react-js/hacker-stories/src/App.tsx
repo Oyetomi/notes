@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 type storiesProp = {
@@ -29,12 +29,19 @@ const App = () => {
       objectID: 1,
     },
   ];
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+  const searchedStories = stories.filter((story) =>
+    story.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
   return (
     <div>
       <h1>My Hacker Stories</h1>
-      <Search />
+      <Search onSearch={handleSearch} />
       <hr />
-      <List list={stories} />
+      <List list={searchedStories} />
     </div>
   );
 };
@@ -60,10 +67,11 @@ const List: React.FC<ListProps> = ({ list }) => {
   );
 };
 
-const Search = () => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    event.preventDefault();
-  };
+type SearchProps = {
+  onSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const Search: React.FC<SearchProps> = ({ onSearch }) => {
   return (
     <>
       <label htmlFor="search">Search:</label>
@@ -71,7 +79,7 @@ const Search = () => {
         id="search"
         type="text"
         placeholder="Search.."
-        onChange={handleChange}
+        onChange={onSearch}
       />
     </>
   );

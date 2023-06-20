@@ -29,12 +29,21 @@ const App = () => {
       objectID: 1,
     },
   ];
-  const [searchTerm, setSearchTerm] = useState(
-    localStorage.getItem("search") || "React"
-  );
-  useEffect(() => {
-    localStorage.setItem("search", searchTerm);
-  }, [searchTerm]);
+
+  const useStorageState = (
+    key: string,
+    initialState: string
+  ): [string, (newValue: string) => void] => {
+    const [value, setValue] = useState(
+      localStorage.getItem(key) || initialState
+    );
+    useEffect(() => {
+      localStorage.setItem("value", value);
+    }, [value, key]);
+    return [value, setValue];
+  };
+
+  const [searchTerm, setSearchTerm] = useStorageState("search", "React");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);

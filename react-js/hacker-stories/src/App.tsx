@@ -54,7 +54,12 @@ const App = () => {
   return (
     <div>
       <h1>My Hacker Stories</h1>
-      <Search search={searchTerm} onSearch={handleSearch} />
+      <InputWithLabel
+        id="search"
+        label="Search"
+        value={searchTerm}
+        onInputChange={handleSearch}
+      />
       <hr />
       <List list={searchedStories} />
     </div>
@@ -88,24 +93,26 @@ const List: React.FC<ListProps> = ({ list }) => (
   </ul>
 );
 
-type SearchProps = {
-  search: string;
-  onSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
+type InputWithLabelProps = {
+  id: string;
+  label: string;
+  value: string;
+  type?: string;
+  onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Search: React.FC<SearchProps> = ({ onSearch, search }) => {
-  return (
-    <>
-      <label htmlFor="search">Search:</label>
-      <input
-        id="search"
-        type="text"
-        value={search}
-        placeholder="Search.."
-        onChange={onSearch}
-      />
-    </>
-  );
-};
+const InputWithLabel: React.FC<InputWithLabelProps> = ({
+  id,
+  label,
+  value,
+  type = "text",
+  onInputChange,
+}) => (
+  <>
+    <label htmlFor={id}>{label}</label>
+    &nbsp;
+    <input id={id} type={type} value={value} onChange={onInputChange} />
+  </>
+);
 
 export default App;

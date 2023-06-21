@@ -56,10 +56,11 @@ const App = () => {
       <h1>My Hacker Stories</h1>
       <InputWithLabel
         id="search"
-        label="Search"
         value={searchTerm}
         onInputChange={handleSearch}
-      />
+      >
+        <strong>Search:</strong>
+      </InputWithLabel>
       <hr />
       <List list={searchedStories} />
     </div>
@@ -95,21 +96,21 @@ const List: React.FC<ListProps> = ({ list }) => (
 
 type InputWithLabelProps = {
   id: string;
-  label: string;
   value: string;
   type?: string;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  children: React.ReactNode;
 };
 
 const InputWithLabel: React.FC<InputWithLabelProps> = ({
   id,
-  label,
   value,
   type = "text",
   onInputChange,
+  children,
 }) => (
   <>
-    <label htmlFor={id}>{label}</label>
+    <label htmlFor={id}>{children}</label>
     &nbsp;
     <input id={id} type={type} value={value} onChange={onInputChange} />
   </>

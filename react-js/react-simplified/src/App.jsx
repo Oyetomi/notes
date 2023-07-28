@@ -5,8 +5,8 @@ import TodoList from "./TodoList.jsx";
 import RenderName from "./Name.jsx";
 import { TodoListClass } from "./TodoListClass.jsx";
 import { RenderNameClass } from "./NameClass.jsx";
-import TodoListItem from "./TodoListItem.jsx";
-import TodoListItemClass from "./TodoListItem.jsx";
+import TodoListItem from "./TodoListItem.js";
+import TodoListItemClass from "./TodoListItem.js";
 
 function App() {
   // const myCustomLabel = (

@@ -1,5 +1,5 @@
-function RenderName() {
-  return <h1>My name is abbey</h1>;
+function RenderName({ children }) {
+  return <div>{children}</div>;
 }
 
 export default RenderName;

@@ -5,6 +5,8 @@ import TodoList from "./TodoList.jsx";
 import RenderName from "./Name.jsx";
 import { TodoListClass } from "./TodoListClass.jsx";
 import { RenderNameClass } from "./NameClass.jsx";
+import TodoListItem from "./TodoListItem.jsx";
+import TodoListItemClass from "./TodoListItem.jsx";
 
 function App() {
   // const myCustomLabel = (
@@ -23,9 +25,12 @@ function App() {
     <div>
       <h1>Todo List</h1>
       <TodoList />
-      <RenderName />
+      <RenderName>
+        <span>child</span>
+      </RenderName>
       <TodoListClass />
       <RenderNameClass />
+      <TodoListItemClass isComplete={false}>Todo 1</TodoListItemClass>
     </div>
   );
 }

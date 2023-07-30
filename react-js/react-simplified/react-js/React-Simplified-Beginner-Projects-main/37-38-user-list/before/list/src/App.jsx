@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const [users, setUsers] = useState();
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   useEffect(() => {
     setLoading(true);
     setError(undefined);
+    setUsers(undefined);
     const controller = new AbortController();
     fetch("https:/jsonplaceholder.typicode.com/users", {
       signal: controller.signal,
@@ -37,7 +38,14 @@ function App() {
   } else if (error != null) {
     jsx = <h2>Error!</h2>;
   } else {
-    jsx = JSON.stringify(users);
+    jsx = (
+      <span>
+        {users != null &&
+          users.map((user) => {
+            return <div key={user.id}>{user.name}</div>;
+          })}
+      </span>
+    );
   }
 
   return (

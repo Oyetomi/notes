@@ -1,7 +1,56 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
+
+// const reducer = (count: number, newValue: number): number => {
+//   return newValue;
+// };
+//
+// const action = {
+//   type: 'increment',
+//   payload: {},
+// };
+//
+// type ReducerState = ReturnType<typeof reducer>;
+
+type initialState = {
+  count: number;
+  draftCount: string | number;
+};
+
+const initialState: InitialState = {
+  count: 0,
+  draftCount: 0,
+};
+
+const reducer = (state = initialState, action: number) => {
+  if (action.type === 'increment') {
+    const newCount = count + 1;
+    return { count: newCount, draftCount: newCount };
+  }
+
+  if (action.type === 'decrement') {
+    const newCount = count - 1;
+    return { count: newCount, draftCount: newCount };
+  }
+
+  if (action.type === 'reset') {
+    return { count: 0, draftCount: 0 };
+  }
+
+  if (action.type === 'updateDraftCount') {
+    console.log('updateDraftCount');
+
+    return { count, draftCount: action.payload };
+  }
+
+  if (action.type === 'updateCountFromDraft') {
+    return { count: Number(draftCount), draftCount };
+  }
+
+  return state;
+};
 
 const Counter = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useReducer(reducer, initialState);
   const [draftCount, setDraftCount] = React.useState(0);
 
   return (

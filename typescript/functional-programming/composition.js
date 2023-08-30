@@ -1,11 +1,19 @@
 "use strict";
-// // my solution lol
-// const compose = (toString: number, increment: number) =>
-//   (toString += increment).toString();
+// type Increment = (x: number) => number;
+// type ToString = (x: number) => string;
 //
-// console.log(compose(2, 3));
-const increment = (x) => x + 1;
-const toStringg = (x) => `"${x}"`;
-const compose = (f, g) => (x) => f(g(x));
-const incrementThenToString = compose(toStringg, increment);
-console.log(incrementThenToString(6));
+// const increment: Increment = (x) => x + 1;
+//
+// const toStringg: ToString = (x) => `"${x}"`;
+//
+// type IncrementThenToString = (x: number) => string;
+//
+// type Compose = <A, B, C> (f: (x: B) => C, g: (x: A) => B) => (x: A) => C;
+//
+// const compose: Compose = (f, g) => (x) => f(g(x));
+//
+// const incrementThenToString: IncrementThenToString = compose(
+//     toStringg,
+//     increment
+// );
+// console.log(incrementThenToString(6));

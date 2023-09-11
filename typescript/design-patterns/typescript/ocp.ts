@@ -14,12 +14,18 @@ class PremiumCustomer implements Customer {
   }
 }
 
+class GoldCustomer implements Customer {
+  giveDiscount(): number {
+    return 30;
+  }
+}
+
 class Discount {
   giveDiscount(customer: Customer): number {
     return customer.giveDiscount();
   }
 }
 
-let premiumCustomer: PremiumCustomer = new PremiumCustomer();
+let goldCustomer: GoldCustomer = new GoldCustomer();
 let discount: Discount = new Discount();
-console.log(discount.giveDiscount(premiumCustomer));
+console.log(discount.giveDiscount(goldCustomer));

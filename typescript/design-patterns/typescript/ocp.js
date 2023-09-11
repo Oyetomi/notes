@@ -9,11 +9,16 @@ class PremiumCustomer {
         return 20;
     }
 }
+class GoldCustomer {
+    giveDiscount() {
+        return 30;
+    }
+}
 class Discount {
     giveDiscount(customer) {
         return customer.giveDiscount();
     }
 }
-let premiumCustomer = new PremiumCustomer();
+let goldCustomer = new GoldCustomer();
 let discount = new Discount();
-console.log(discount.giveDiscount(premiumCustomer));
+console.log(discount.giveDiscount(goldCustomer));

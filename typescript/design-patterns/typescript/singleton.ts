@@ -48,3 +48,16 @@ let logger1 = Logger.getInstance();
 let logger2 = Logger.getInstance();
 logger1.log("This is the first message");
 logger2.log("This is the second message");
+
+class Application {
+  constructor(private logger: Logger) {}
+
+  run() {
+    this.logger.log("Application is running");
+    this.logger.log("Application is shutting down");
+  }
+}
+
+const logger = Logger.getInstance();
+const newApplication = new Application(logger);
+newApplication.run();

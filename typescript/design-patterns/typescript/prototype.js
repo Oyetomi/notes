@@ -35,6 +35,7 @@ class Rectangle extends Shape {
             x: this.properties.x,
             y: this.properties.y,
         };
+        // @ts-ignore
         return new Rectangle(cloneProperties, this.width, this.height);
     }
 }
@@ -48,6 +49,7 @@ class Circle extends Shape {
             x: this.properties.x,
             y: this.properties.y,
         };
+        // @ts-ignore
         return new Circle(cloneProperties, this.radius);
     }
 }

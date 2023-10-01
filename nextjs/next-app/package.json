@@ -10,6 +10,7 @@
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "dependencies": {
+    "@prisma/client": "^5.3.1",
     "@types/node": "20.6.5",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
@@ -19,6 +20,7 @@
     "fast-sort": "^3.4.0",
     "next": "13.4",
     "postcss": "8.4.30",
+    "prisma": "^5.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",

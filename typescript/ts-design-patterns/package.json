@@ -1,0 +1,18 @@
+{
+  "name": "ts-design-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inputOutput.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest-environment-jsdom": "^29.6.2"
+  },
+  "dependencies": {
+    "jest-run": "^2.0.1"
+  }
+}

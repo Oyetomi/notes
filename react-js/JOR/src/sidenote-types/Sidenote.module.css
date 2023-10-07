@@ -1,0 +1,27 @@
+.wrapper {
+    border-radius: 3px 6px 6px 3px;
+    border-left: 3px solid;
+    padding:24px;
+    margin-bottom: 32px
+}
+
+.notice {
+    background-color: hsl(210deg 55% 92%);
+    border-color: hsl(245deg 100% 60%)
+}
+
+.warning {
+    background-color: hsl(38deg 100% 50% / 0.1);
+    border-color: hsl(30deg 100% 50%)
+}
+
+
+.error {
+    background-color: hsl(340deg 95% 43% / 0.1);
+    border-color: hsl(340deg 95% 60%)
+}
+
+.success {
+    background-color: hsl(160deg 100% 40% / 0.1);
+    border-color: hsl(160deg 100% 40%)
+}

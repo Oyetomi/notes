@@ -1,6 +1,5 @@
-import React, { PropsWithChildren, useState } from 'react';
-import { fetchQuotes } from './application';
-import { Quote } from './application';
+import React, { PropsWithChildren } from 'react';
+import { fetchQuotes, Quote } from './application';
 
 type QuotesProps = {
   setQuotes: React.Dispatch<React.SetStateAction<Quote[]>>;

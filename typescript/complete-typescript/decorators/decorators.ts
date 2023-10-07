@@ -112,13 +112,13 @@ class AirPlane {
 //   }
 // }
 
-const airplane: AircraftInterface = new AirPlane("Airbus A380", "John");
+// const airplane: AircraftInterface = new AirPlane("Airbus A380", "John");
 // airplane.pilotName = () => console.log("pilot changed");
 // airplane.pilotName();
 // const helicopter: AircraftInterface = new Helicopter("H380", "Mark");
-console.log(airplane);
+// console.log(airplane);
 // console.log(helicopter);
 
-airplane.airbusMethod
-  ? airplane.airbusMethod()
-  : console.log("method does not exist");
+// airplane.airbusMethod
+//   ? airplane.airbusMethod()
+//   : console.log("method does not exist");

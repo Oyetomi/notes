@@ -37,26 +37,26 @@
 //   }
 // }
 
-class Square {
-  constructor(public width: number) {}
-}
-class Rectangle extends Square {
-  constructor(public width: number, public height: number) {
-    super(width);
-  }
-}
-
-type Shape = Square | Rectangle;
-
-function calculateArea(shape: Shape) {
-  if (shape instanceof Rectangle) {
-    shape;
-    return shape.width * shape.height;
-  }
-  shape;
-  return shape.width * shape.width;
-}
-
-function asNumber(value: number | string): number {
-  return typeof value === "string" ? Number(value) : value;
-}
+// class Square {
+//   constructor(public width: number) {}
+// }
+// class Rectangle extends Square {
+//   constructor(public width: number, public height: number) {
+//     super(width);
+//   }
+// }
+//
+// type Shape = Square | Rectangle;
+//
+// function calculateArea(shape: Shape) {
+//   if (shape instanceof Rectangle) {
+//     shape;
+//     return shape.width * shape.height;
+//   }
+//   shape;
+//   return shape.width * shape.width;
+// }
+//
+// function asNumber(value: number | string): number {
+//   return typeof value === "string" ? Number(value) : value;
+// }

@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Quotes from './quotes';
 import InspirationalQuote from './quote';
-import Loading from './loading';
 
 export type Quote = {
   id: number;

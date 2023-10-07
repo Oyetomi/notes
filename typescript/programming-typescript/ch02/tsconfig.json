@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "lib": ["es2015"], "module": "commonjs", "outDir": "dist", "sourceMap": true, "strict": true, "target": "es2015"
+  }, "include": [
+  "src"
+] }
